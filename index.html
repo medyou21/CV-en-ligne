@@ -13,30 +13,25 @@
     <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 <body>
-    <div class="cv-container">
-
-        <!-- En-tête -->
-        <header class="cv-header">
-            <div class="photo">
-                <a href="./assets/images/profil.jpg" target="_blank">
-                    <img src="./assets/images/profil.jpg" alt="Photo de Mohamed Hamdi">
-                </a>
-            </div>
+ <header>
+    <div class="header-content">
+      <img src="./assets/images/profil.jpg" alt="Photo profil" class="profile-pic">
+      <div class="title">
+        <h1>Mohamed HAMDI</h1>
+        <h2>Développeur Web et Web Mobile</h2>
             <div class="infos">
-                <h1>Mohamed Hamdi</h1>
-                <h2>Développeur GreenTech</h2>
-                <p>
-                    <a href="https://www.google.com/maps/place/Nantes" target="_blank">Nantes, France</a> |
-                    <a href="mailto:hamdi.mohamed@example.com">mohamed.hamdi@exemple.com</a> |
-                    <a href="tel:+33244557788">02 44 55 77 88</a>
-                </p>
-                <div class="social-icons">
-                    <a href="https://github.com/medyou21" target="_blank"><img src="./assets/images/github.ico" alt="GitHub"></a>
-                    <a href="https://www.linkedin.com/in/mohamed-hamdi-4011a758/" target="_blank"><img src="./assets/images/linkedin.ico" alt="LinkedIn"></a>
-                </div>
-            </div>
-        </header>
+          <p><i class="fa fa-envelope"></i> <img src="./assets/images/mail.ico" alt="mail"> <a href="mailto:hamdi.mohamed@example.com">mohamed.hamdi</a></p>
+          <p><i class="fa fa-phone"></i><img src="./assets/images/tel.ico"alt="phone"> <a href="tel:+33244557788">02 44 55 77 88</a></p>
+       
+          <p><i class="fa fa-map-marker-alt"></i> <img src="./assets/images/adresse.ico" alt="adresse"><a href="https://www.google.com/maps/place/Nantes" target="_blank">Nantes, France</a></p>
+          <p><i class="fa fa-id-card"></i><img src="./assets/images/voiture.ico" alt="voiture"> Permis B</p>
+        </div>
+      </div>
+    </div>
+  </header>
 
+    <main>
+        <aside>
         <!-- Profil -->
         <section class="profil">
             <h3>Profil</h3>
@@ -49,11 +44,11 @@
         <section class="competences">
             <h3>Compétences</h3>
             <ul>
-                <li>HTML5, CSS3, JavaScript</li>
-                <li>Flexbox et responsive design</li>
-                <li>Git / GitHub</li>
-                <li>Développement front-end et back-end</li>
-                <li>Optimisation SEO et accessibilité</li>
+                <li>HTML5, CSS3, JavaScript  <span class="stars">★★★★☆</span></li>
+                <li>Flexbox et responsive design  <span class="stars">★★★★☆</span></li>
+                <li>Git / GitHub  <span class="stars">★★★★☆</span></li>
+                <li>Développement front-end et back-end <span class="stars">★★★★☆</span></li>
+                <li>Optimisation SEO et accessibilité <span class="stars">★★★★☆</span></li>
                 <li>Systèmes d’exploitation : Windows Server, Linux (Ubuntu, CentOS)</li>
                 <li>Virtualisation : VMware, Hyper-V</li>
                 <li>Gestion des réseaux : TCP/IP, VLAN, VPN</li>
@@ -65,6 +60,20 @@
                 <li>Langages de programmation : Python, Java, PHP, ANDROID</li>
             </ul>
         </section>
+        <!--Langues-->
+        <section class="langues">
+            <h3>LANGUES</h3>
+            <p>Français </p>
+            <p>Anglais </p>
+        </section>
+         <!-- Centres d'intérêt -->
+        <section class="interets">
+            <h3>Centres d’intérêt</h3>
+            <p>Coding, Randonnée, Photographie, Sport</p>
+        </section>
+    </div>
+     </aside>
+  
 
         <!-- Formations -->
         <section class="formations">
@@ -134,17 +143,14 @@
                 <p>Net Computer Service - 2009 - 2010</p>
             </div>
         </section>
-
-        <!-- Centres d'intérêt -->
-        <section class="interets">
-            <h3>Centres d’intérêt</h3>
-            <p>Coding, Randonnée, Photographie, Sport</p>
-        </section>
-
+        </div>
+        
+       
+    </main>
         <footer class="cv-footer">
             <p>Dernière mise à jour : 27 septembre 2025</p>
         </footer>
 
-    </div>
+    
 </body>
 </html>

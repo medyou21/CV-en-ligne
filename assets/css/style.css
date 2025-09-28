@@ -14,107 +14,161 @@
     src: url('../fonts/Raleway-Italic.ttf') format('truetype');
     font-style: italic;
 }
-
-/* Reset et boîte */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+/* responsive*/
+@media (max-width: 600px) {
+  .infos {
+    grid-template-columns: 1fr; /* une seule colonne sur petit écran */
+  }
 }
 
-/* Container principal */
-.cv-container {
-    width: 1160px;
-    margin: 0 auto;
-    font-family: 'Raleway', sans-serif;
-    color: #333;
+/*section header*/
+/* Style général du header */
+header {
+  background: #00a6b6;
+  color: white;
+  padding: 10px;
 }
 
-/* Header */
-.cv-header {
-    display: flex;
-    align-items: center;
-    margin-bottom: 20px;
+/* Organisation en 2 colonnes : photo + bloc texte */
+.header-content {
+   display: grid;
+  grid-template-columns: 1fr 1fr; /* 2 colonnes égales */
+  gap: 0; /* supprime tout espace vertical et horizontal entre les colonnes */
+  text-align: right; /* texte aligné à droite dans les colonnes */
+  margin: 0; /* supprime toute marge autour du container */
+  padding: 0; /* supprime tout padding */
+  width: 100%; /* le container occupe toute la largeur disponible */
+  box-sizing: border-box; /* pour que padding et bordure soient inclus dans la largeur */
 }
 
-.cv-header .photo img {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    border: 3px solid #2E8B57;
-    transition: transform 0.3s;
+/* Photo arrondie */
+.profile-pic {
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
 }
 
-.cv-header .photo img:hover {
-    cursor: zoom-in;
-    transform: scale(1.1);
+
+/* Nom */
+.title h1 {
+    
+  margin: 0;
+  font-size: 32px;
+  font-weight: bold;
 }
 
-.cv-header .infos {
-    margin-left: 20px;
+/* Sous-titre */
+.title h2 {
+    
+  margin: 5px 0;
+  font-weight: normal;
+  font-size: 20px;
 }
 
-.cv-header h1 {
-    font-family: 'Lato', sans-serif;
-    font-size: 2em;
-    color: #2E8B57;
+/* Coordonnées */
+.infos {
+   display: grid;
+  grid-template-columns: 1fr 1fr; /* 2 colonnes */
+  gap: 0px; /* espace vertical et horizontal */
+  max-width: 70%;
+   justify-content:right;
+  }
+.infos1 {
+   display: grid;
+  grid-template-columns: 1fr 1fr; /* 2 colonnes */
+  gap: 0px; /* espace vertical et horizontal */
+  max-width: 70%;
+   justify-content:right;
+  }
+.infos p{
+ margin: 0;
+ padding: 0;
+ gap: 0px;
+ 
+ }
+ .infos1 p{
+ margin: 0;
+ padding: 0;
+ gap: 0px;
+ 
+}
+.infos img {
+  width: 16px;
+  height: 16px;
 }
 
-.cv-header h2 {
-    font-family: 'Lato', sans-serif;
-    font-size: 1.5em;
-    color: #555;
+.infos a {
+  color: white;
+  text-decoration: none;
+}
+.infos1 a {
+  color: white;
+  text-decoration: none;
+}
+.infos a:hover {
+  text-decoration: underline;
+}
+.infos1 a:hover {
+  text-decoration: underline;
+}
+main {
+  display: flex;
+  margin: 20px;
 }
 
-.cv-header p a {
-    color: #333;
-    text-decoration: none;
-    margin-right: 10px;
+aside {
+  width: 30%;
+  padding: 15px;
+  background: #f0fafa;
+  border-radius: 8px;
+}
+aside h3 {
+  border-bottom: 2px solid #00a6b6;
+  padding-bottom: 5px;
+  margin-top: 20px;
 }
 
-.cv-header .social-icons img {
-    width: 30px;
-    margin-right: 10px;
-    transition: opacity 0.3s;
+aside ul {
+  list-style: none;
+  padding: 0;
 }
 
-.cv-header .social-icons img:hover {
-    opacity: 0.8;
+aside ul li {
+  margin: 5px 0;
 }
 
-/* Sections */
-section {
-    margin-bottom: 20px;
+.content {
+  width: 70%;
+  padding: 0 20px;
 }
 
-section h3 {
-    font-family: 'Lato', sans-serif;
-    font-size: 1.5em;
-    color: #2E8B57;
-    margin-bottom: 10px;
+.content h3 {
+  color: #00a6b6;
+  border-bottom: 2px solid #ddd;
+  padding-bottom: 5px;
+  margin-top: 20px;
 }
 
-.profil p {
-    text-align: justify;
-    text-indent: 2em;
+.date {
+  float: right;
+  color: #00a6b6;
 }
 
-/* Formations et expériences avec effet hover */
-.formation-item, .experience-item {
-    padding: 10px;
-    margin-bottom: 5px;
-    transition: background-color 0.3s, border-left 0.3s;
+.stars {
+  color: #ff9800;
 }
 
-.formation-item:hover, .experience-item:hover {
-    background-color: #e0f2e9;
-    border-left: 5px solid #2E8B57;
+footer {
+  text-align: center;
+  padding: 15px;
+  background: #00a6b6;
+  color: white;
+  margin-top: 20px;
 }
 
-/* Footer */
-.cv-footer {
-    text-align: center;
-    margin-top: 20px;
-    font-size: 0.9em;
-    color: #777;
+.socials i {
+  margin: 0 10px;
+  font-size: 20px;
+  cursor: pointer;
 }
