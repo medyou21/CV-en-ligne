@@ -20,13 +20,18 @@
     grid-template-columns: 1fr; /* une seule colonne sur petit écran */
   }
 }
-
+body {
+  margin: 5%;
+  font-family: Arial, sans-serif;
+  background: #f5f5f5;
+  color: #333;
+}
 /*section header*/
 /* Style général du header */
 header {
   background: #00a6b6;
   color: white;
-  padding: 10px;
+  padding: 20px;
 }
 
 /* Organisation en 2 colonnes : photo + bloc texte */
@@ -39,6 +44,7 @@ header {
   padding: 0; /* supprime tout padding */
   width: 100%; /* le container occupe toute la largeur disponible */
   box-sizing: border-box; /* pour que padding et bordure soient inclus dans la largeur */
+  border-radius: 8%;
 }
 
 /* Photo arrondie */
@@ -164,7 +170,7 @@ footer {
   padding: 15px;
   background: #00a6b6;
   color: white;
-  margin-top: 20px;
+  margin-top: 10px;
 }
 
 .socials i {
@@ -172,8 +178,40 @@ footer {
   font-size: 20px;
   cursor: pointer;
 }
-.socials i {
-  margin: 0 10px;
-  font-size: 20px;
-  cursor: pointer;
+.content {
+  width: 70%;
+  padding: 0 20px;
+ 
+}
+.item
+{
+  list-style: none;         /* pas de puces */
+  padding: 8px 12px;
+  background-color: #f0f0f0; /* couleur de base */
+  margin-bottom: 6px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease; /* animation fluide */
+  
+}
+.item li{
+  margin: 5px 0;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+ul li:hover {
+  background-color: #cad1d2; /* couleur quand la souris passe */
+  color: white;              /* texte devient blanc */
+  cursor: pointer;           /* pointeur main */
+}
+
+.content h3 {
+  color: #00a6b6;
+  border-bottom: 2px solid #ddd;
+  padding-bottom: 5px;
+  margin-top: 20px;
+}
+
+.date {
+  float: right;
+  color: #00a6b6;
 }
