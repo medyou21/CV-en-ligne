@@ -36,7 +36,7 @@ h1, h2, h3, h4 {
 header {
   background: #00a6b6;
   color: white;
-  padding: 20px;
+  padding: 10px;
 }
 
 /* Organisation en 2 colonnes : photo + bloc texte */
@@ -59,7 +59,10 @@ header {
   height: 120px;
   object-fit: cover;
 }
-
+/*title*/
+.title{
+  flex: 1;
+}
 
 /* Nom */
 .title h1 {
@@ -72,12 +75,13 @@ header {
 /* Sous-titre */
 .title h2 {
     
-  margin: 5px 0;
+   margin: 5px 0 15px 0;
   font-weight: normal;
   font-size: 20px;
 }
 
-/* Coordonnées */
+
+ /* Coordonnées */
 .infos {
    display: grid;
   grid-template-columns: 1fr 1fr; /* 2 colonnes */
@@ -85,44 +89,29 @@ header {
   max-width: 70%;
    justify-content:right;
   }
-.infos1 {
-   display: grid;
+.infos {
+  display: grid;
   grid-template-columns: 1fr 1fr; /* 2 colonnes */
-  gap: 0px; /* espace vertical et horizontal */
-  max-width: 70%;
-   justify-content:right;
-  }
-.infos p{
- margin: 0;
- padding: 0;
- gap: 0px;
- 
- }
- .infos1 p{
- margin: 0;
- padding: 0;
- gap: 0px;
- 
+   gap: 0; /* aucun espace entre les colonnes */
+  margin-left: auto;
+  padding: 0;
+  width:fit-content;
+  justify-content: flex-end;
 }
 .infos img {
   width: 16px;
   height: 16px;
 }
-
 .infos a {
-  color: white;
-  text-decoration: none;
-}
-.infos1 a {
   color: white;
   text-decoration: none;
 }
 .infos a:hover {
   text-decoration: underline;
 }
-.infos1 a:hover {
-  text-decoration: underline;
-}
+
+
+
 main {
   display: flex;
   margin: 20px;
@@ -172,16 +161,17 @@ aside ul li {
 
 footer {
   text-align: center;
-  padding: 15px;
+  padding: 0px;
   background: #00a6b6;
   color: white;
-  margin-top: 10px;
+  margin-top: 0px;
 }
-
-.socials i {
+.socials img {
   margin: 0 10px;
   font-size: 20px;
   cursor: pointer;
+  width: 25px;
+  height: 25px;
 }
 .content {
   width: 70%;
