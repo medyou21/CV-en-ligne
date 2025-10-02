@@ -43,7 +43,7 @@ header {
 .header-content {
    display: grid;
   grid-template-columns: 1fr 1fr; /* 2 colonnes égales */
-  gap: 0; /* supprime tout espace vertical et horizontal entre les colonnes */
+  gap: 20; /* supprime tout espace vertical et horizontal entre les colonnes */
   text-align: right; /* texte aligné à droite dans les colonnes */
   margin: 0; /* supprime toute marge autour du container */
   padding: 0; /* supprime tout padding */
@@ -54,10 +54,15 @@ header {
 
 /* Photo arrondie */
 .profile-pic {
+
   border-radius: 50%;
   width: 120px;
   height: 120px;
-  object-fit: cover;
+  transition: transform 0.3s ease;
+  cursor: zoom-in;
+}
+.profile-pic:hover{
+   transform: scale(1.05); /* léger zoom visuel au survol */
 }
 /*title*/
 .title{
@@ -82,13 +87,7 @@ header {
 
 
  /* Coordonnées */
-.infos {
-   display: grid;
-  grid-template-columns: 1fr 1fr; /* 2 colonnes */
-  gap: 0px; /* espace vertical et horizontal */
-  max-width: 70%;
-   justify-content:right;
-  }
+
 .infos {
   display: grid;
   grid-template-columns: 1fr 1fr; /* 2 colonnes */
@@ -96,7 +95,7 @@ header {
   margin-left: auto;
   padding: 0;
   width:fit-content;
-  justify-content: flex-end;
+  justify-content:center;
 }
 .infos img {
   width: 16px;
@@ -139,16 +138,27 @@ aside ul li {
 }
 
 .content {
-  width: 70%;
-  padding: 0 20px;
+ /* width: 70%;
+  padding: 0 20px;*/
+
+  padding: 10px;
+  border-left: 3px solid transparent; /* invisible par défaut */
+  transition: all 0.3s ease;
+}
+.content:hover {
+  border-left: 3px solid #009688;  /* même couleur que les titres */
+  background-color: #f5f5f5;       /* fond légèrement gris */
 }
 
-.content h3 {
+ h3 {
   color: #00a6b6;
   border-bottom: 2px solid #ddd;
   padding-bottom: 5px;
   margin-top: 20px;
+
+
 }
+
 
 .date {
   float: right;
@@ -168,10 +178,13 @@ footer {
 }
 .socials img {
   margin: 0 10px;
-  font-size: 20px;
   cursor: pointer;
   width: 25px;
   height: 25px;
+  transition: opacity 0.3s ease;
+}
+.socials img:hover {
+opacity: 0.7;
 }
 .content {
   width: 70%;
