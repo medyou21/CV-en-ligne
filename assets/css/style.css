@@ -1,17 +1,17 @@
 /* Import Raleway via @font-face */
 @font-face {
     font-family: 'Raleway';
-    src: url('/fonts/Raleway-Regular.ttf') format('truetype');
+    src: url('/assets/fonts/Raleway-Regular.ttf') format('truetype');
     font-weight: normal;
 }
 @font-face {
     font-family: 'Raleway';
-    src: url('/fonts/Raleway-Bold.ttf') format('truetype');
+    src: url('/assets/fonts/Raleway-Bold.ttf') format('truetype');
     font-weight: bold;
 }
 @font-face {
     font-family: 'Raleway';
-    src: url('/fonts/Raleway-Italic.ttf') format('truetype');
+    src: url('/assets/fonts/Raleway-Italic.ttf') format('truetype');
     font-style: italic;
 }
 /* responsive*/
@@ -138,9 +138,6 @@ aside ul li {
 }
 
 .content {
- /* width: 70%;
-  padding: 0 20px;*/
-
   padding: 10px;
   border-left: 3px solid transparent; /* invisible par défaut */
   transition: all 0.3s ease;
@@ -166,7 +163,7 @@ aside ul li {
 }
 
 .stars {
-  color: #ff9800;
+  color: #00a6b6;
 }
 
 footer {
